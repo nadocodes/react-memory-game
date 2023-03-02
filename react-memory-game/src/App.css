@@ -51,6 +51,11 @@
   transition: all 0.3s ease;
 }
 
+.card.revealed {
+  cursor: default;
+  scale: 1;
+}
+
 .read-the-docs {
   color: #888;
 }

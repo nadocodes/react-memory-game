@@ -60,7 +60,7 @@ function App() {
           {row.map((number, colIndex) => (
             <div 
             onClick={() => handleCardClicked(rowIndex, colIndex)}
-            key={colIndex} className="card">
+            key={colIndex} className={"card " + (isFlipped[rowIndex][colIndex] ? "revealed" : "")}>
               {isFlipped[rowIndex][colIndex] ? number : ' '}
               </div>
           ))}
