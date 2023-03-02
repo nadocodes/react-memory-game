@@ -26,6 +26,7 @@
 .card.revealed {
   cursor: default;
   scale: 1;
+  background: #70dd3e;
 }
 
 .grid {
