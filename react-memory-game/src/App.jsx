@@ -8,6 +8,7 @@ function App() {
     [4, 3, 5, 0],
   ]);
 
+
   const [isFlipped, setIsFlipped] = useState(
     new Array(grid.length)
     .fill('')
@@ -35,13 +36,6 @@ function App() {
           newIsFlipped[previousCard.row][previousCard.col] = false;
           setIsFlipped([...newIsFlipped]);
         }, 1000/2)
-      } else {
-        const win = isFlipped.flat().every((card) => card === true);
-        if (win) {
-          setTimeout(() => {
-          alert('You win!');
-          }, 1000/5)
-        }        
       }
       setPreviousCard(undefined);
     } else {
@@ -67,6 +61,7 @@ function App() {
         </div>
       ))}
       </div>
+      {isFlipped.flat().every((card) => card === true) && <div><h1 className="win">You win!</h1> <button>Reset</button></div>}
     </div>
   )
 }

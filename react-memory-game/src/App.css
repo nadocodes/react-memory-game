@@ -39,3 +39,7 @@
   display: flex;
   gap: 1rem;
 }
+
+.win {
+  color: #70dd3e;
+}
