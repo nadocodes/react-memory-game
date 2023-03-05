@@ -1,5 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
+
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 function App() {
   const [grid, setGrid] = useState([
@@ -7,6 +16,10 @@ function App() {
     [1, 2, 2, 4],
     [4, 3, 5, 0],
   ]);
+
+  useEffect(() => {
+    setGrid(shuffleArray(grid));
+  }, []);
 
 
   const [isFlipped, setIsFlipped] = useState(
