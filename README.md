@@ -10,12 +10,12 @@ To get started with this app, follow these steps:
 
 1.  Clone this repository to your local machine:
     ```<bash>
-    `git clone https://github.com/nadocodes/react-memory-game.git`
+    git clone https://github.com/nadocodes/react-memory-game.git
     ```
 
 2.  Change into the app's directory:
     ```<bash>
-    `cd react-memory-game`
+    cd react-memory-game
     ```
 
 3.  Install the dependencies:
